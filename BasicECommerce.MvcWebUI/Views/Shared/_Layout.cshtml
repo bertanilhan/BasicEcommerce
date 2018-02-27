@@ -1,0 +1,25 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+    <script src="~/Scripts/bootstrap.min.js"></script>
+    <script src="~/Scripts/jquery-3.0.0.slim.min.js"></script>
+
+    <meta name="viewport" content="width=device-width" />
+    <title>Product Store</title>
+</head>
+<body>
+@{Html.RenderAction("Index","Navbar");}
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3">
+                @{ Html.RenderAction("Index", "Category");}
+            </div>
+            <div class="col-md-9">
+                @RenderBody()
+            </div>
+        </div>
+    </div>
+</body>
+</html>

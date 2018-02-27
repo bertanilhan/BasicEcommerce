@@ -1,0 +1,34 @@
+﻿@model BasicECommerce.MvcWebUI.Models.ProductViewModel
+
+@{
+    ViewBag.Title = "title";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Product Detail</h2>
+<div class="card">
+    <div class="row">
+        <div class="col">
+            <img class="card-img-top" src="https://www.svgrepo.com/show/71276/image.svg" alt="Card image cap">
+        </div>
+        <div class="col">
+            <div class="card-body">
+                <h5 class="card-title">@Model.Product.ProductName</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            </div>
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item">Product Id: @Model.Product.ProductId</li>
+                <li class="list-group-item">Category Id :@Model.Product.CategoryId</li>
+                <li class="list-group-item">Quantity Per Unit: @Model.Product.QuantityPerUnit</li>
+                <li class="list-group-item">Unit Price: @Model.Product.UnitPrice</li>
+                <li class="list-group-item">Units in Stock: @Model.Product.UnitsInStock</li>
+            </ul>
+        </div>
+    </div>
+
+
+    <div class="card-body">
+        <a href="#" class="card-link">Card link</a>
+        <a href="#" class="card-link">Another link</a>
+    </div>
+</div>

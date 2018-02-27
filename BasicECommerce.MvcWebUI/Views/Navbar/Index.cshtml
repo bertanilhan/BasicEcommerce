@@ -1,0 +1,22 @@
+﻿@model BasicECommerce.MvcWebUI.Models.NavbarViewModel
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container">
+        <a class="navbar-brand" href="#">Navbar</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                @foreach (var category in Model.Categories)
+                {
+
+                    <li class="nav-item @(ViewBag.CurrentCategoryId == category.CategoryId ? "active":"")">
+                        @Html.ActionLink(category.CategoryName,"Index",new {controller = "Product",action="List", categoryId= category.CategoryId},new {@class = "nav-link" })
+                    </li>
+                    
+                }
+            </ul>
+        </div>
+    </div>
+</nav>
